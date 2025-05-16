@@ -1,0 +1,567 @@
+name: exe1
+author: Rafael Corsi
+version: 1
+
+steps:
+  - delay: 100ms
+
+##############################################
+# 1.Verifica estado inicial do display 
+# 
+#             A
+#           F   B
+#             G
+#           E   C
+#             D 
+#
+##############################################
+
+#################################
+# 0
+#################################
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: A
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: B
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: C
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: D
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: E
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: F
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: G
+      value: 0
+
+#################################
+# 1
+#################################
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 1  
+  - delay: 10ms  
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 0
+  - delay: 50ms  
+
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: A
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: B
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: C
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: D
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: E
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: F
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: G
+      value: 0
+
+#################################
+# 2
+#################################
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 1  
+  - delay: 10ms  
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 0
+  - delay: 50ms 
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: A
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: B
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: C
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: D
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: E
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: F
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: G
+      value: 1
+
+#################################
+# 3
+#################################
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 1  
+  - delay: 10ms 
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 0
+  - delay: 50ms 
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: A
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: B
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: C
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: D
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: E
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: F
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: G
+      value: 1
+
+#################################
+# 4
+#################################
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 1  
+  - delay: 10ms  
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 0
+  - delay: 50ms 
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: A
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: B
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: C
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: D
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: E
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: F
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: G
+      value: 1
+
+#################################
+# 5
+#################################
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 1  
+  - delay: 10ms  
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 0
+  - delay: 50ms 
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: A
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: B
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: C
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: D
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: E
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: F
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: G
+      value: 1
+
+#################################
+# 6
+#################################
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 1  
+  - delay: 10ms  
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 0
+  - delay: 50ms 
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: A
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: B
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: C
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: D
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: E
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: F
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: G
+      value: 1
+
+#################################
+# 7
+#################################
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 1  
+  - delay: 10ms  
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 0
+  - delay: 50ms 
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: A
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: B
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: C
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: D
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: E
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: F
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: G
+      value: 0
+
+#################################
+# 8
+#################################
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 1  
+  - delay: 10ms  
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 0
+  - delay: 50ms 
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: A
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: B
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: C
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: D
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: E
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: F
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: G
+      value: 1
+
+#################################
+# 9
+#################################
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 1  
+  - delay: 10ms  
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 0
+  - delay: 50ms 
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: A
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: B
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: C
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: D
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: E
+      value: 0
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: F
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: G
+      value: 1
+
+#################################
+# 0 (volta)
+#################################
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 1  
+  - delay: 10ms  
+
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 0
+  - delay: 50ms 
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: A
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: B
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: C
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: D
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: E
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: F
+      value: 1
+
+  - expect-pin:
+      part-id: sevseg1
+      pin: G
+      value: 0
