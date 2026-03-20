@@ -13,7 +13,7 @@ jobs:
       - uses: insper-embarcados/actions-wokwi-test@v3
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
-          test_name: exe2
+          test_name: pisca-led-tempo-botao
       - uses: insper-embarcados/actions-firmware-rubric-check@v0
         with:
           c_file: pisca-led-tempo-botao/main.c
