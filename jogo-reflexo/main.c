@@ -211,8 +211,10 @@ int main() {
             cancel_alarm(alarm);
             estado = 0;
             fired = 0;
-            printf("Pontuação: %d\n", level);
+            int pnts = level
+            printf("Points %d\n", pnts);
             level = 0;
+            pnts = 0;
         }
        
     }
